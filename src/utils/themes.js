@@ -1,6 +1,6 @@
 export default {
   colors: {
-    gradient: 'linear-gradient(to right, #03a9f4 0%,#009688 100%)', 
+    gradient: '-webkit-linear-gradient(left, #03a9f4 0%,#009688 75%,#009688 100%)', 
     teal: '#009688',
     lightBlue: '#03a9f4',
     darkBlue: '#3f51b5',
@@ -8,10 +8,10 @@ export default {
     white: '#ffffff'
   },
   fonts: {
-    Roboto: 'Roboto'
+    Roboto: "'Roboto', sans-serif"
   },
   '1920': {
-    fontsSizes: {
+    fontSizes: {
       H1: {
         fontSize: '60px',
         lineHeight: '68px'
@@ -31,7 +31,7 @@ export default {
     }
   },
   '375': {
-    fontsSizes: {
+    fontSizes: {
       H1: {
         fontSize: '40px',
         lineHeight: '48px'
