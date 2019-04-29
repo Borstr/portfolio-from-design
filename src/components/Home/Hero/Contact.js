@@ -21,8 +21,8 @@ const StyledDiv = styled.div`
 `
 
 const StyledH2 = styled.h2`
-  font-size: ${({ theme }) => theme['375'].fontSizes.H3.fontSize};
-  line-height: ${({ theme }) => theme['375'].fontSizes.H3.lineHeight};
+  font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
+  line-height: ${({ theme }) => theme['375'].fontSizes.small.lineHeight};
   margin: 0 ${({ theme }) => theme.baseDistance}px;
 `
 

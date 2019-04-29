@@ -28,6 +28,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999999;
 `
 
 const StyledHamburger = styled(Hamburger)`

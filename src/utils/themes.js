@@ -32,17 +32,20 @@ export default {
   },
   '375': {
     fontSizes: {
-      H1: {
+      big: {
         fontSize: '40px',
-        lineHeight: '48px'
+        lineHeight: '48px',
+        shadow: '0 0 3px rgba(0, 0, 0, .12), 0 0 5px rgba(0, 0, 0, .24)'
       },
-      H2: {
+      medium: {
         fontSize: '32px',
-        lineHeight: '40px'
+        lineHeight: '40px',
+        shadow: '0 0 7px rgba(0, 0, 0, .2), 0 0 10px rgba(0, 0, 0, .4)'
       },
-      H3: {
+      small: {
         fontSize: '24px',
-        lineHeight: '32px'
+        lineHeight: '32px',
+        shadow: '0 0 3px rgba(0, 0, 0, .12), 0 0 5px rgba(0, 0, 0, .24)'
       },
       body: {
         fontSize: '16px',

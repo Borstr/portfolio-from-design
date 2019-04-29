@@ -14,17 +14,17 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-size: ${({ theme }) => theme['375'].fontSizes.H1.fontSize};
-    line-height: ${({ theme }) => theme['375'].fontSizes.H1.lineHeight};
+    font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
+    line-height: ${({ theme }) => theme['375'].fontSizes.big.lineHeight};
   }
 
   h2 {
-    font-size: ${({ theme }) => theme['375'].fontSizes.H2.fontSize};
-    line-height: ${({ theme }) => theme['375'].fontSizes.H2.lineHeight};
+    font-size: ${({ theme }) => theme['375'].fontSizes.medium.fontSize};
+    line-height: ${({ theme }) => theme['375'].fontSizes.medium.lineHeight};
   }
 
   h3 {
-    font-size: ${({ theme }) => theme['375'].fontSizes.H3.fontSize};
-    line-height: ${({ theme }) => theme['375'].fontSizes.H3.lineHeight};
+    font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
+    line-height: ${({ theme }) => theme['375'].fontSizes.small.lineHeight};
   }
 `
