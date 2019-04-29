@@ -50,5 +50,5 @@ export default {
       }
     }
   },
-  baseDistance: '8px'
+  baseDistance: 8
 }

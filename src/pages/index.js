@@ -2,14 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 
-import GradientTemplate from '../templates/GradientTemplate'
+import WavyTemplate from '../templates/WavyTemplate'
 
-// import Hero from '../components/Home/Hero'
+import Hero from '../components/Home/Hero/Hero'
+import About from '../components/Home/About/About'
 
 const IndexPage = () => 
-  <GradientTemplate>
-    {/* <Hero /> */}
-    <div>smth</div>
-  </GradientTemplate>
+  <WavyTemplate>
+    <Hero />
+    <About />
+  </WavyTemplate>
 
 export default IndexPage
