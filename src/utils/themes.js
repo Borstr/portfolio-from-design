@@ -1,7 +1,7 @@
 export default {
   colors: {
     gradient: '-webkit-linear-gradient(left, #03a9f4 0%,#009688 75%,#009688 100%)',
-    gradientHeader: '-webkit-linear-gradient(left, #03a9f4 0%,#009688 90%,#009688 100%)', 
+    gradientNav: '-webkit-linear-gradient(left, #03a9f4 0%,#009688 90%,#009688 100%)', 
     teal: '#009688',
     lightBlue: '#03a9f4',
     darkBlue: '#3f51b5',
