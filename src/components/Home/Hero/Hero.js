@@ -42,7 +42,7 @@ const StyledSubcontainer = styled.div`
   grid-template-columns: 1fr 1fr;
 `
 
-const StyledH1 = styled.h1`
+const StyledH1 = styled.h2`
   font-size: ${({ theme }) => theme.baseDistance * 4}px;
   text-align: center;
   margin: 0;

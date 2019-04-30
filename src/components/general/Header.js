@@ -7,26 +7,6 @@ import Hamburger from '../../svgs/Hamburger'
 import Logo from '../../svgs/Logo'
 
 export default () => {
-<<<<<<< HEAD
-  const [ shouldShowNav, triggerNav ] = useState(false);
-
-  return (
-    <StyledNav>
-      <StyledHeader>
-        <StyledLogo />
-        <StyledH1>Borys Strzelewicz</StyledH1>
-      </StyledHeader>
-      <StyledList>
-
-      </StyledList>
-      <StyledHamburgerButton>
-        <StyledHamburger />
-      </StyledHamburgerButton>
-    </StyledNav>
-  )
-}
-
-=======
   const [ shouldShowNav, triggerNav ] = useState(null);
 
   return (
@@ -106,27 +86,12 @@ const StyledOverlay = styled.button`
   }
 `
 
->>>>>>> Nav
 const StyledList = styled.ul`
   position: fixed;
   left: 0;
   top: 60px;
   height: calc(100vh - 60px);
   width: 80vw;
-<<<<<<< HEAD
-  padding: ${({ theme }) => `0 ${theme.baseDistance * 2}px ${theme.baseDistance * 15}px ${theme.baseDistance * 2}px`};
-  background: ${({ theme }) => theme.colors.gradientNav};
-  margin: 0;
-  list-style-type: none;
-`
-
-const StyledItem = styled.li`
-
-`
-
-const StyledLink = styled(Link)`
-
-=======
   display: ${({ shouldShow }) => shouldShow === null ? 'none' : 'block'};
   padding: ${({ theme }) => `0 ${theme.baseDistance * 2}px ${theme.baseDistance * 8}px ${theme.baseDistance * 2}px`};
   background: ${({ theme }) => theme.colors.gradientNav};
@@ -145,7 +110,6 @@ const StyledLink = styled(Link)`
     from { left: 0 }
     to { left: -80vw }
   }
->>>>>>> Nav
 `
 
 const StyledNav = styled.nav`
