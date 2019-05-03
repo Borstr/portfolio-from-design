@@ -55,12 +55,13 @@ const StyledH1 = styled.h2`
 const StyledWave375Top = styled(Wave375Top)`
   position: absolute;
   width: 100vw;
+  top: 180px;
   left: 0;
 `
 
 const StyledWave375Bot = styled(Wave375Bot)`
   position: absolute;
   width: 100vw;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 `

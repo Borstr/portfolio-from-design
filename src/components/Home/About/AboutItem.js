@@ -48,6 +48,6 @@ const StyledCircle = styled.div`
 `
 
 const StyledBrush = styled(Brush)`
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 `
