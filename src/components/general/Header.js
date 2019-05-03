@@ -71,7 +71,7 @@ const StyledOverlay = styled.button`
   padding: 0;
   margin: 0;
   outline: none;
-  animation: 500ms ${({ shouldShow }) => shouldShow ? 'showOverlay' : shouldShow === null ? '' : 'hideOverlay'} linear;
+  animation: 500ms ${({ shouldShow }) => shouldShow ? 'showOverlay' : shouldShow === null ? '' : 'hideOverlay'} ease-out;
   animation-fill-mode: forwards;
   z-index: 99999;
 
@@ -98,12 +98,12 @@ const StyledList = styled.ul`
   margin: 0;
   list-style-type: none;
   z-index: 999999;
-  animation: 500ms ${({ shouldShow }) => shouldShow ? 'showNav' : shouldShow === null ? '' : 'hideNav'} linear;
+  animation: 500ms ${({ shouldShow }) => shouldShow ? 'showNav' : shouldShow === null ? '' : 'hideNav'} ease-out;
   animation-fill-mode: forwards;
 
   @keyframes showNav {
-    from { left: -80vw }
-    to { left: 0 }
+    0% { left: -80vw }
+    100% { left: 0 }
   }
 
   @keyframes hideNav {
