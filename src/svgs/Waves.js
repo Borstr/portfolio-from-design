@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Wave375Top = ({ className }) => 
-  <svg className={className} viewBox="0 0 100 15.5">
+  <svg className={className} viewBox="0 0 100 15.5" preserveAspectRatio="none">
     <filter id="wave_375_bot_dropshadow">
       <feGaussianBlur in="SourceGraphic" stdDeviation=".5" />
     </filter>
@@ -18,7 +18,7 @@ export const Wave375Top = ({ className }) =>
   </svg>
 
 export const Wave375Bot = ({ className }) => 
-  <svg className={className} transform="rotate(180)" viewBox="0 0 100 15.5">
+  <svg className={className} transform="rotate(180)" viewBox="0 0 100 15.5" preserveAspectRatio="none">
     <filter id="wave_375_bot_dropshadow">
       <feGaussianBlur in="SourceGraphic" stdDeviation=".5" />
     </filter>
