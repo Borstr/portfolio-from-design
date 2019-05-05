@@ -6,17 +6,17 @@ import { Wave375Top, Wave375Bot } from '../../svgs/Waves'
 
 import Project from './Project'
 
-export default () => 
+export default ({ triggerModal }) => 
   <StyledSection>
     <StyledWavyContainer>
       <StyledTitle>Programming</StyledTitle>
       <StyledWave375Top />
     </StyledWavyContainer>
     <StyledGradientContainer>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      <Project triggerModal={triggerModal}/>
+      <Project triggerModal={triggerModal}/>
+      <Project triggerModal={triggerModal}/>
+      <Project triggerModal={triggerModal}/>
       <StyledWave375Bot />
     </StyledGradientContainer>
   </StyledSection>

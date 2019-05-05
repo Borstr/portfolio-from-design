@@ -4,13 +4,13 @@ import styled from 'styled-components'
 
 import Project from './Project'
 
-export default () =>
+export default ({ triggerModal }) =>
   <StyledContainer>
     <StyledTitle>Design</StyledTitle>
-    <Project />
-    <Project />
-    <Project />
-    <Project />
+    <Project triggerModal={triggerModal}/>
+    <Project triggerModal={triggerModal}/>
+    <Project triggerModal={triggerModal}/>
+    <Project triggerModal={triggerModal}/>
   </StyledContainer>
 
 const StyledContainer = styled.section`

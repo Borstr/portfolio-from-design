@@ -2,16 +2,18 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-export default () => 
-  <StyledContainer>
+export default ({ triggerModal }) => 
+  <StyledContainer onClick={() => triggerModal(true)}>
 
   </StyledContainer>
 
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.button`
   background: ${({ theme }) => theme.colors.white};
   width: 150px;
   height: 125px;
+  border: none;
+  outline: none;
   margin: ${({ theme }) => theme.baseDistance * 2}px;
 
   &:nth-of-type(2n - 1) {
