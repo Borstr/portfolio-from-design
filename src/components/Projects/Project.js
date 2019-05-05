@@ -14,11 +14,11 @@ const StyledContainer = styled.div`
   height: 125px;
   margin: ${({ theme }) => theme.baseDistance * 2}px;
 
-  &:nth-child(2n - 1) {
+  &:nth-of-type(2n - 1) {
     margin-left: 0;
   }
 
-  &:nth-child(2n) {
+  &:nth-of-type(2n) {
     margin-right: 0;
   }
 `
