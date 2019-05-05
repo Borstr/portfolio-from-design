@@ -116,7 +116,7 @@ const StyledNav = styled.nav`
   background: ${({ theme }) => theme.colors.gradient};
   width: 100vw;
   height: 60px;
-  padding: 0 8px;
+  padding: 0 ${({ theme }) => theme.baseDistance}px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, .12), 0 5px 10px rgba(0, 0, 0, .24);
   position: fixed;
   left: 0;

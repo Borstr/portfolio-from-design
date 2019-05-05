@@ -9,11 +9,11 @@ import Contact from './Contact'
 export default () => 
   <StyledSection>
     <WavyContainer>
-      <StyledH1>
+      <StyledTitle>
         Borys Strzelewicz
         <br/>
         Front-end Developer
-      </StyledH1>
+      </StyledTitle>
       <StyledWave375Top/>
       <StyledWave375Bot />
     </WavyContainer>
@@ -26,13 +26,17 @@ export default () =>
 const StyledSection = styled.section`
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: auto 1fr;
 `
 
 const WavyContainer = styled.div`
   background: ${({ theme }) => theme.colors.darkBlue};
   padding: ${({ theme }) => theme.baseDistance * 2}px;
   padding-top: ${({ theme }) => theme.baseDistance * 10}px;
+
+  @media(min-width: 1366px) {
+    padding-top: ${({ theme }) => theme.baseDistance * 8 + 60}px;
+  }
 `
 
 const StyledSubcontainer = styled.div`
@@ -40,12 +44,21 @@ const StyledSubcontainer = styled.div`
   padding: ${({ theme }) => theme.baseDistance * 10}px ${({ theme }) => theme.baseDistance * 2}px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media(min-width: 1366px) {
+    padding: ${({ theme }) => theme.baseDistance * 4}px;
+  }
 `
 
-const StyledH1 = styled.h2`
-  font-size: ${({ theme }) => theme.baseDistance * 4}px;
+const StyledTitle = styled.h2`
   text-align: center;
   margin: 0;
+  width: 100%;
+
+  @media(max-width: 1365px) {
+    font-size: ${({ theme }) => theme.baseDistance * 4}px;
+    line-height: ${({ theme }) => theme.baseDistance * 5}px;
+  }
 
   @media(max-width: 330px) {
     font-size: ${({ theme }) => theme.baseDistance * 3.5}px;
@@ -54,14 +67,25 @@ const StyledH1 = styled.h2`
 
 const StyledWave375Top = styled(Wave375Top)`
   position: absolute;
-  width: 100vw;
-  top: 180px;
+  width: 100%;
+  top: 160px;
   left: 0;
+  height: 60px;
+
+  @media(min-width: 1366px) {
+    height: 80px;
+    top: 275px;
+  }
 `
 
 const StyledWave375Bot = styled(Wave375Bot)`
   position: absolute;
-  width: 100vw;
-  bottom: -1px;
+  width: 100%;
+  height: 60px;
+  bottom: 0px;
   left: 0;
+
+  @media(min-width: 1366px) {
+    height: 80px;
+  }
 `

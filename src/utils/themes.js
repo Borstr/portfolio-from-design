@@ -13,15 +13,15 @@ export default {
   },
   '1920': {
     fontSizes: {
-      H1: {
+      big: {
         fontSize: '60px',
         lineHeight: '68px'
       },
-      H2: {
+      medium: {
         fontSize: '36px',
         lineHeight: '44px'
       },
-      H3: {
+      small: {
         fontSize: '28px',
         lineHeight: '36px'
       },

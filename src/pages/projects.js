@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import WavyTemplate from '../templates/WavyTemplate'
+import MainTemplate from '../templates/MainTemplate'
 
 import Programming from '../components/Projects/Programming'
 import Design from '../components/Projects/Design'
@@ -10,11 +10,11 @@ export default () => {
   const [ shouldShow, triggerModal ] = useState(null)
 
   return (
-    <WavyTemplate>
+    <MainTemplate>
       <Programming triggerModal={triggerModal}/>
       <Design triggerModal={triggerModal}/>
       <ProjectModal shouldShow={shouldShow} triggerModal={triggerModal}/>
-    </WavyTemplate>
+    </MainTemplate>
   )
 }
 

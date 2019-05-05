@@ -6,21 +6,21 @@ export default ({ className }) =>
       <filter id="Rectangle_137" x="0" y="0" width="66" height="26" filterUnits="userSpaceOnUse">
         <feOffset input="SourceAlpha"/>
         <feGaussianBlur stdDeviation="3" result="blur"/>
-        <feFlood flood-opacity="0.161"/>
+        <feFlood floodOpacity="0.161"/>
         <feComposite operator="in" in2="blur"/>
         <feComposite in="SourceGraphic"/>
       </filter>
       <filter id="Rectangle_138" x="0" y="32" width="66" height="26" filterUnits="userSpaceOnUse">
         <feOffset input="SourceAlpha"/>
         <feGaussianBlur stdDeviation="3" result="blur-2"/>
-        <feFlood flood-opacity="0.161"/>
+        <feFlood floodOpacity="0.161"/>
         <feComposite operator="in" in2="blur-2"/>
         <feComposite in="SourceGraphic"/>
       </filter>
       <filter id="Rectangle_139" x="0" y="16" width="66" height="26" filterUnits="userSpaceOnUse">
         <feOffset input="SourceAlpha"/>
         <feGaussianBlur stdDeviation="3" result="blur-3"/>
-        <feFlood flood-opacity="0.161"/>
+        <feFlood floodOpacity="0.161"/>
         <feComposite operator="in" in2="blur-3"/>
         <feComposite in="SourceGraphic"/>
       </filter>

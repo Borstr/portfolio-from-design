@@ -8,23 +8,36 @@ export default createGlobalStyle`
 
   * {
     font-size: ${({ theme }) => theme['375'].fontSizes.body.fontSize};
+    line-height: ${({ theme }) => theme['375'].fontSizes.body.lineHeight};
     font-family: ${({ theme }) => theme.fonts.Roboto};
     box-sizing: border-box;
     color: #fff;
   }
 
-  h1 {
+  h2 {
     font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
     line-height: ${({ theme }) => theme['375'].fontSizes.big.lineHeight};
-  }
-
-  h2 {
-    font-size: ${({ theme }) => theme['375'].fontSizes.medium.fontSize};
-    line-height: ${({ theme }) => theme['375'].fontSizes.medium.lineHeight};
   }
 
   h3 {
     font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
     line-height: ${({ theme }) => theme['375'].fontSizes.small.lineHeight};
+  }
+
+  @media(min-width: 375px) {
+    * {
+      font-size: ${({ theme }) => theme['1920'].fontSizes.body.fontSize};
+      line-height: ${({ theme }) => theme['1920'].fontSizes.body.lineHeight};
+    }
+
+    h2 {
+      font-size: ${({ theme }) => theme['1920'].fontSizes.big.fontSize};
+      line-height: ${({ theme }) => theme['1920'].fontSizes.big.lineHeight};
+    }
+
+    h3 {
+      font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
+      line-height: ${({ theme }) => theme['1920'].fontSizes.small.lineHeight};
+    }
   }
 `

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import styled from 'styled-components'
 
-import WavyTemplate from '../templates/WavyTemplate'
+import MainTemplate from '../templates/MainTemplate'
 
 import Frontend from '../components/Skills/Frontend'
 import Learning from '../components/Skills/Learning'
@@ -13,7 +13,7 @@ export default () => {
   const [ shouldShow, triggerModal ] = useState(null)
 
   return (
-    <WavyTemplate>
+    <MainTemplate>
       <Frontend triggerModal={triggerModal}/>
       <StyledGradientContainer>
         <InnerSection triggerModal={triggerModal} title="Back-end" />
@@ -22,7 +22,7 @@ export default () => {
       </StyledGradientContainer>
       <Learning triggerModal={triggerModal} />
       <SkillModal shouldShow={shouldShow} triggerModal={triggerModal}/>
-    </WavyTemplate>
+    </MainTemplate>
   )
 }
 

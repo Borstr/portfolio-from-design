@@ -16,22 +16,20 @@ export default () =>
   </StyledContainer>
 
 const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
   text-align: center;
   margin: ${({ theme }) => theme.baseDistance * 4}px 0;
+  width: 400px;
+  max-width: 100%;
 `
 
 const StyledParagraph = styled.p`
-  font-size: ${({ theme }) => theme['375'].fontSizes.body.fontSize};
-  line-height: ${({ theme }) => theme['375'].fontSizes.body.lineHeight};
   margin: 0;
 `
 
 const StyledTitle = styled.h3`
-  font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
-  line-height: ${({ theme }) => theme['375'].fontSizes.small.lineHeight};
   text-shadow: ${({ theme }) => theme['375'].fontSizes.small.shadow};
   margin: ${({ theme }) => theme.baseDistance * 2}px 0;
 `
@@ -45,9 +43,19 @@ const StyledCircle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(min-width: 900px) {
+    width: 150px;
+    height: 150px;
+  }
 `
 
 const StyledBrush = styled(Brush)`
   width: 60px;
   height: 60px;
+
+  @media(min-width: 900px) {
+    width: 100px;
+    height: 100px;
+  }
 `
