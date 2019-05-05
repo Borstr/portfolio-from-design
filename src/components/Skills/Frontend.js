@@ -6,11 +6,11 @@ import { Wave375Top } from '../../svgs/Waves'
 
 import Skill from './Skill'
 
-export default () => 
+export default ({ triggerModal }) => 
   <StyledSection>
     <StyledTitle>Front-end</StyledTitle>
     <StyledSubcontainer>
-      <Skill>
+      <Skill triggerModal={triggerModal}>
 
       </Skill>
       <Skill>

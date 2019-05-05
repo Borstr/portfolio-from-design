@@ -97,7 +97,7 @@ const StyledList = styled.ul`
   background: ${({ theme }) => theme.colors.gradientNav};
   margin: 0;
   list-style-type: none;
-  z-index: 999999;
+  z-index: 99999999;
   animation: 500ms ${({ shouldShow }) => shouldShow ? 'showNav' : shouldShow === null ? '' : 'hideNav'} ease-out;
   animation-fill-mode: forwards;
 

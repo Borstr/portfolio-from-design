@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 import Skill from './Skill'
 
-export default ({ title }) => 
+export default ({ title, triggerModal }) => 
   <StyledSection>
     <StyledTitle>{title}</StyledTitle>
     <StyledSubcontainer>
-      <Skill>
+      <Skill triggerModal={triggerModal}>
           
       </Skill>
       <Skill>
