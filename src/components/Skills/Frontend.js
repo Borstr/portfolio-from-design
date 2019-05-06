@@ -64,5 +64,10 @@ const StyledWave375Top = styled(Wave375Top)`
   width: 100%;
   height: 60px;
   position: relative;
-  margin-bottom: -50px;
+  margin-bottom: -20px;
+  bottom: -30px;
+
+  @media(min-width: 375px) {
+    height: 70px;
+  }
 `

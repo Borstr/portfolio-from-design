@@ -15,12 +15,4 @@ const StyledContainer = styled.button`
   border: none;
   outline: none;
   margin: ${({ theme }) => theme.baseDistance * 2}px;
-
-  &:nth-of-type(2n - 1) {
-    margin-left: 0;
-  }
-
-  &:nth-of-type(2n) {
-    margin-right: 0;
-  }
 `

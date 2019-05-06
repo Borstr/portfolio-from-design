@@ -45,5 +45,9 @@ const StyledWave375Bot = styled(Wave375Bot)`
   width: 100%;
   height: 60px;
   position: relative;
-  margin-top: -37px;
+  margin-top: -43px;
+
+  @media(min-width: 375px) {
+    height: 70px;
+  }
 `

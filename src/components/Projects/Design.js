@@ -23,8 +23,7 @@ const StyledContainer = styled.section`
 `
 
 const StyledTitle = styled.h2`
-  font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
-  line-height: ${({ theme }) => theme['375'].fontSizes.big.lineHeight};
+  text-shadow: ${({ theme }) => theme['375'].fontSizes.medium.shadow};
   margin: ${({ theme }) => theme.baseDistance * 4}px 0;
   text-align: center;
   width: 100%;

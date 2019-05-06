@@ -35,15 +35,14 @@ const StyledWavyContainer = styled.div`
 const StyledGradientContainer = styled.div`
   background: ${({ theme }) => theme.colors.gradient};
   margin: 0;
-  padding-top: ${({ theme }) => theme.baseDistance * 8}px;
+  padding-top: ${({ theme }) => theme.baseDistance * 4 + 60}px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `
 
 const StyledTitle = styled.h2`
-  font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
-  line-height: ${({ theme }) => theme['375'].fontSizes.big.lineHeight};
+  text-shadow: ${({ theme }) => theme['375'].fontSizes.medium.shadow};
   margin: ${({ theme }) => `${theme.baseDistance * 4}px ${theme.baseDistance * 2}px`};
   text-align: center;
 `
@@ -51,16 +50,24 @@ const StyledTitle = styled.h2`
 const StyledWave375Top = styled(Wave375Top)`
   width: 100%;
   position: relative;
-  right: 0;
   margin-bottom: -45px;
   height: 60px;
+
+  @media(min-width: 375px) {
+    height: 70px;
+    margin-bottom: -50px;
+  }
 `
 
 const StyledWave375Bot = styled(Wave375Bot)`
   width: 100%;
   position: relative;
   bottom: 0;
-  margin-top: 16px;
-  margin-bottom: -16px;
+  margin-top: ${({ theme }) => theme.baseDistance * 6}px;
+  margin-bottom: -${({ theme }) => theme.baseDistance * 2}px;
   height: 60px;
+
+  @media(min-width: 375px) {
+    height: 70px;
+  }
 `
