@@ -46,11 +46,12 @@ const StyledSubcontainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: hidden;
 `
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.colors.darkBlue};
-  padding: ${({ theme }) => `${theme.baseDistance * 10}px ${theme.baseDistance * 2}px 0px ${theme.baseDistance * 2}px`};
+  padding-top: ${({ theme }) => theme.baseDistance * 4 + 60}px;
 `
 
 const StyledTitle = styled.h2`
@@ -61,8 +62,8 @@ const StyledTitle = styled.h2`
 `
 
 const StyledWave375Top = styled(Wave375Top)`
-  width: 100vw;
+  width: 100%;
+  height: 60px;
   position: relative;
-  margin-left: -${({ theme }) => theme.baseDistance * 2}px;
-  margin-bottom: -61px;
+  margin-bottom: -50px;
 `

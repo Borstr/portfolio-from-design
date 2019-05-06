@@ -41,7 +41,8 @@ const StyledContainer = styled.div`
   }
 
   @media(max-width: 899px) {
-    grid-template-columns: 1fr;
+    max-width: 100%;
+    display: block;
   }
 `
 

@@ -17,12 +17,4 @@ const StyledContainer = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-
-  &:nth-child(4n - 3):not(:last-child) {
-    margin-left: 0;
-  }
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 `

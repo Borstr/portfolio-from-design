@@ -9,7 +9,7 @@ import Skill from './Skill'
 export default ({ triggerModal }) => 
   <StyledSection>
     <StyledWave375Bot />
-    <StyledTitle>Front-end</StyledTitle>
+    <StyledTitle>Learning</StyledTitle>
     <StyledSubcontainer>
       <Skill triggerModal={triggerModal}>
 
@@ -32,7 +32,7 @@ const StyledSubcontainer = styled.div`
 
 const StyledSection = styled.section`
   background: ${({ theme }) => theme.colors.darkBlue};
-  padding: ${({ theme }) => `${theme.baseDistance * 2}px ${theme.baseDistance * 2}px ${theme.baseDistance * 8}px ${theme.baseDistance * 2}px`};
+  padding: ${({ theme }) => `0 0 ${theme.baseDistance * 8}px 0`};
 `
 
 const StyledTitle = styled.h2`
@@ -43,8 +43,8 @@ const StyledTitle = styled.h2`
 `
 
 const StyledWave375Bot = styled(Wave375Bot)`
-  width: 100vw;
-  position: absolute;
-  margin-left: -${({ theme }) => theme.baseDistance * 2}px;
-  margin-top: -65px;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-top: -37px;
 `
