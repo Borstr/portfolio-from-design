@@ -45,8 +45,16 @@ const StyledItem = styled.li`
   height: calc((100vh - 124px) / 4);
   line-height: calc((100vh - 124px) / 4);
 
-  &:last-child {
-    border-bottom: 1px dashed ${({ theme }) => theme.colors.white};
+  @media(max-width: 374px) {
+    &:last-child {
+      border-bottom: 1px dashed ${({ theme }) => theme.colors.white};
+    }
+  }
+
+  @media(min-width: 1366px) {
+    height: 60px;
+    line-height: 60px;
+    border: none;
   }
 `
 
@@ -57,6 +65,17 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: lowercase;
   font-size: ${({ theme }) => theme['375'].fontSizes.small.fontSize};
+
+  @media(min-width: 1366px) {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 ${({ theme }) => theme.baseDistance}px;
+    transition: 300ms ease-in-out;
+
+    &:hover, &:focus {
+      background: rgba(0, 0, 0, .24);
+    }
+  }
 `
 
 const StyledOverlay = styled.button`
@@ -84,6 +103,10 @@ const StyledOverlay = styled.button`
     from { left: 0 }
     to { left: -100vw }
   }
+
+  @media(min-width: 1366px) {
+    display: none;
+  }
 `
 
 const StyledList = styled.ul`
@@ -110,6 +133,16 @@ const StyledList = styled.ul`
     from { left: 0 }
     to { left: -80vw }
   }
+
+  @media(min-width: 1366px) {
+    display: block;
+    position: static;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+  }
 `
 
 const StyledNav = styled.nav`
@@ -117,6 +150,7 @@ const StyledNav = styled.nav`
   width: 100vw;
   height: 60px;
   padding: 0 ${({ theme }) => theme.baseDistance}px;
+  padding-right: ${({ theme }) => theme.baseDistance * 2}px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, .12), 0 5px 10px rgba(0, 0, 0, .24);
   position: fixed;
   left: 0;
@@ -140,6 +174,10 @@ const StyledHamburgerButton = styled.button`
   margin: 0;
   background: transparent;
   outline: none;
+
+  @media(min-width: 1366px) {
+    display: none;
+  }
 `
 
 const StyledHeader = styled.header`

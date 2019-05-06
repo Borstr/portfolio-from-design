@@ -8,7 +8,7 @@ export default () =>
     <StyledParagraph>
       frontend@borysstrzelewicz.pl
       <br/>
-      +48 664 916 712
+      +48 664 196 712
       <br/>
       github
       <br/>
