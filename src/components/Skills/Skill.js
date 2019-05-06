@@ -17,4 +17,9 @@ const StyledContainer = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
+
+  @media(min-width: 375px) {
+    height: 100px;
+    width: 100px;
+  }
 `
