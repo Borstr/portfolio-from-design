@@ -28,6 +28,7 @@ const StyledContainer = styled.div`
 
 const StyledParagraph = styled.p`
   margin: 0;
+  max-width: 100%;
 `
 
 const StyledTitle = styled.h3`

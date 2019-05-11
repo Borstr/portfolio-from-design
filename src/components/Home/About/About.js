@@ -30,6 +30,7 @@ const StyledContainer = styled.div`
   display: grid;
   margin: 0 auto;
   justify-items: center;
+  grid-template-columns: 100%;
 
   @media(min-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
@@ -38,11 +39,6 @@ const StyledContainer = styled.div`
   @media(min-width: 1366px) {
     max-width: 1366px;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media(max-width: 899px) {
-    max-width: 100%;
-    display: block;
   }
 `
 
