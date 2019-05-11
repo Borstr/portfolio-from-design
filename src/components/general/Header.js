@@ -41,13 +41,13 @@ export default () => {
 
 const StyledItem = styled.li`
   display: block;
-  border-top: 1px dashed ${({ theme }) => theme.colors.white};
+  border-top: 2px dashed ${({ theme }) => theme.colors.white};
   height: calc((100vh - 124px) / 4);
   line-height: calc((100vh - 124px) / 4);
 
   @media(max-width: 374px) {
     &:last-child {
-      border-bottom: 1px dashed ${({ theme }) => theme.colors.white};
+      border-bottom: 2px dashed ${({ theme }) => theme.colors.white};
     }
   }
 
