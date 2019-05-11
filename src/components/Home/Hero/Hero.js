@@ -82,7 +82,7 @@ const StyledWave375Bot = styled(Wave375Bot)`
   position: absolute;
   width: 100%;
   height: 60px;
-  bottom: 0px;
+  bottom: -1px;
   left: 0;
 
   @media(min-width: 1366px) {

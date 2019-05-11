@@ -7,7 +7,7 @@ import { Wave375Top, Wave375Bot } from '../../svgs/Waves'
 import Project from './Project'
 
 export default ({ triggerModal }) => 
-  <StyledSection>
+  <section>
     <StyledWavyContainer>
       <StyledTitle>Programming</StyledTitle>
       <StyledWave375Top />
@@ -19,12 +19,7 @@ export default ({ triggerModal }) =>
       <Project triggerModal={triggerModal}/>
       <StyledWave375Bot />
     </StyledGradientContainer>
-  </StyledSection>
-
-
-const StyledSection = styled.section`
-  
-`
+  </section>
 
 const StyledWavyContainer = styled.div`
   background: ${({ theme }) => theme.colors.darkBlue};

@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Brush from '../../../svgs/Brush'
+import Monitor from '../../../svgs/Monitor'
 
 export default () => 
   <StyledContainer>
