@@ -18,7 +18,7 @@ export default () =>
   </StyledSection>
 
 const StyledSection = styled.section`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   padding: ${({ theme }) => theme.baseDistance * 6}px ${({ theme }) => theme.baseDistance * 2}px;
 
   @media(min-width: 375px) {

@@ -1,27 +1,72 @@
 import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import styled from 'styled-components'
 
 import MainTemplate from '../templates/MainTemplate'
+import Modal from '../components/general/Modal'
 
 import Frontend from '../components/Skills/Frontend'
-import Learning from '../components/Skills/Learning'
+import Tools from '../components/Skills/Tools'
 import InnerSection from '../components/Skills/InnerSection'
-import SkillModal from '../components/Skills/SkillModal'
 
 export default () => {
   const [ shouldShow, triggerModal ] = useState(null)
+  const [ modalData, triggerModalData ] = useState({ 
+    title: '', 
+    description: {
+      childMarkdownRemark: {
+        html: ''
+      }
+    } 
+  })
 
+  const { allContentfulTechnology: { edges: skills } } = useStaticQuery(graphql`
+    {  
+      allContentfulTechnology {
+        edges {
+          node {
+            title
+            type
+            description {
+              childMarkdownRemark {
+                html
+              }
+            }
+            icon {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  function handleSkillClick(modalData) {
+    triggerModal(true)
+    triggerModalData(modalData)
+  }
+  
   return (
     <MainTemplate>
-      <Frontend triggerModal={triggerModal}/>
+      <Frontend 
+        handleSkillClick={handleSkillClick} 
+        skills={skills}
+      />
       <StyledGradientContainer>
-        <InnerSection triggerModal={triggerModal} title="Back-end" />
-        <InnerSection triggerModal={triggerModal} title="Others" />
-        <InnerSection triggerModal={triggerModal} title="Tools" />
+        <InnerSection handleSkillClick={handleSkillClick} title="Backend" skills={skills} type='be' />
+
+        <InnerSection handleSkillClick={handleSkillClick} skills={skills} type='others'  title="Others" />
       </StyledGradientContainer>
-      <Learning triggerModal={triggerModal} />
-      <SkillModal shouldShow={shouldShow} triggerModal={triggerModal}/>
+      <Tools handleSkillClick={handleSkillClick} skills={skills} />
+      <Modal data={modalData} shouldShow={shouldShow} triggerModal={triggerModal}>
+        <Modal.Title>
+          {modalData.title}
+        </Modal.Title>
+        <Modal.Description html={modalData.description.childMarkdownRemark.html} />
+      </Modal>
     </MainTemplate>
   )
 }

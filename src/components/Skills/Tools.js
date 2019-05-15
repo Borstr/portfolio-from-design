@@ -6,20 +6,14 @@ import { Wave375Bot } from '../../svgs/Waves'
 
 import Skill from './Skill'
 
-export default ({ triggerModal }) => 
+export default ({ handleSkillClick, skills }) => 
   <StyledSection>
     <StyledWave375Bot />
     <StyledTitle>Learning</StyledTitle>
     <StyledSubcontainer>
-      <Skill triggerModal={triggerModal}>
-
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
+      {skills.filter(skill => skill.node.type == 'tools').map(skill => 
+        <Skill key={skill.node.title} data={skill.node} handleSkillClick={handleSkillClick}/>
+      )}
     </StyledSubcontainer>
   </StyledSection>
 
@@ -31,7 +25,7 @@ const StyledSubcontainer = styled.div`
 `
 
 const StyledSection = styled.section`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   padding: ${({ theme }) => `0 0 ${theme.baseDistance * 8}px 0`};
 `
 

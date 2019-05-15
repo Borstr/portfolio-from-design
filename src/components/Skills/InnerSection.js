@@ -1,25 +1,17 @@
 import React from 'react'
+import { StaticQuery } from 'gatsby'
 
 import styled from 'styled-components'
 
 import Skill from './Skill'
 
-export default ({ title, triggerModal }) => 
+export default ({ title, handleSkillClick, skills, type }) =>
   <StyledSection>
     <StyledTitle>{title}</StyledTitle>
     <StyledSubcontainer>
-      <Skill triggerModal={triggerModal}>
-          
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
+      {skills.filter(skill => skill.node.type == type).map(skill => 
+        <Skill key={skill.node.title} data={skill.node} handleSkillClick={handleSkillClick}/>
+      )}
     </StyledSubcontainer>
   </StyledSection>
 

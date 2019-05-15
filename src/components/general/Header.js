@@ -70,7 +70,7 @@ const StyledLink = styled(Link)`
     height: 60px;
     line-height: 60px;
     padding: 0 ${({ theme }) => theme.baseDistance}px;
-    transition: 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
 
     &:hover, &:focus {
       background: rgba(0, 0, 0, .24);

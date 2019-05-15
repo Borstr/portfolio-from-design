@@ -14,7 +14,7 @@ export default ({ triggerModal }) =>
   </StyledContainer>
 
 const StyledContainer = styled.section`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

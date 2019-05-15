@@ -40,7 +40,7 @@ const StyledCircle = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.colors.teal};
+  background-color: ${({ theme }) => theme.colors.teal};
   box-shadow: 0 0 7px rgba(0, 0, 0, .12), 0 0 10px rgba(0, 0, 0, .24);
   display: flex;
   justify-content: center;

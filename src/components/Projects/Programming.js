@@ -22,7 +22,7 @@ export default ({ triggerModal }) =>
   </section>
 
 const StyledWavyContainer = styled.div`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   padding: 0;
   padding-top: ${({ theme }) => theme.baseDistance * 10}px;
 `

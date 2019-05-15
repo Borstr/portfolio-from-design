@@ -6,37 +6,13 @@ import { Wave375Top } from '../../svgs/Waves'
 
 import Skill from './Skill'
 
-export default ({ triggerModal }) => 
+export default ({ handleSkillClick, skills }) =>  
   <StyledSection>
     <StyledTitle>Front-end</StyledTitle>
     <StyledSubcontainer>
-      <Skill triggerModal={triggerModal}>
-
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
-      <Skill>
-        
-      </Skill>
+      {skills.filter(skill => skill.node.type == 'fe').map(skill => 
+        <Skill key={skill.node.title} data={skill.node} handleSkillClick={handleSkillClick}/>
+      )}
     </StyledSubcontainer>
     <StyledWave375Top />
   </StyledSection>
@@ -50,7 +26,7 @@ const StyledSubcontainer = styled.div`
 `
 
 const StyledSection = styled.section`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   padding-top: ${({ theme }) => theme.baseDistance * 4 + 60}px;
 `
 

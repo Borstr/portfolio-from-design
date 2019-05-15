@@ -30,7 +30,7 @@ const StyledSection = styled.section`
 `
 
 const WavyContainer = styled.div`
-  background: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   padding: ${({ theme }) => theme.baseDistance * 2}px;
   padding-top: ${({ theme }) => theme.baseDistance * 10}px;
 
