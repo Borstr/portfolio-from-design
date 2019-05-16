@@ -6,17 +6,16 @@ import { Wave375Top, Wave375Bot } from '../../svgs/Waves'
 
 import Project from './Project'
 
-export default ({ triggerModal }) => 
+export default ({ handleSkillClick, projects }) => 
   <section>
     <StyledWavyContainer>
       <StyledTitle>Programming</StyledTitle>
       <StyledWave375Top />
     </StyledWavyContainer>
     <StyledGradientContainer>
-      <Project triggerModal={triggerModal}/>
-      <Project triggerModal={triggerModal}/>
-      <Project triggerModal={triggerModal}/>
-      <Project triggerModal={triggerModal}/>
+      {projects.filter(project => project.node.type == 'programming').map(project => 
+        <Project key={project.node.title} data={project.node} handleSkillClick={handleSkillClick} />  
+      )}
       <StyledWave375Bot />
     </StyledGradientContainer>
   </section>
@@ -40,6 +39,10 @@ const StyledTitle = styled.h2`
   text-shadow: ${({ theme }) => theme['375'].fontSizes.medium.shadow};
   margin: ${({ theme }) => `${theme.baseDistance * 4}px ${theme.baseDistance * 2}px`};
   text-align: center;
+
+  @media(max-width: 400px) {
+    font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
+  }
 `
 
 const StyledWave375Top = styled(Wave375Top)`

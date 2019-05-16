@@ -4,13 +4,12 @@ import styled from 'styled-components'
 
 import Project from './Project'
 
-export default ({ triggerModal }) =>
+export default ({ handleSkillClick, projects }) =>
   <StyledContainer>
     <StyledTitle>Design</StyledTitle>
-    <Project triggerModal={triggerModal}/>
-    <Project triggerModal={triggerModal}/>
-    <Project triggerModal={triggerModal}/>
-    <Project triggerModal={triggerModal}/>
+    {projects.filter(project => project.node.type == 'design').map(project => 
+      <Project key={project.node.title} data={project.node} handleSkillClick={handleSkillClick} />  
+    )}
   </StyledContainer>
 
 const StyledContainer = styled.section`
@@ -27,5 +26,9 @@ const StyledTitle = styled.h2`
   margin: ${({ theme }) => theme.baseDistance * 4}px 0;
   text-align: center;
   width: 100%;
+
+  @media(max-width: 400px) {
+    font-size: ${({ theme }) => theme['375'].fontSizes.big.fontSize};
+  }
 `
 
